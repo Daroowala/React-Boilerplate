@@ -5,15 +5,16 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import 'antd/dist/reset.css';
-import { useRef } from 'react';
+import { Button } from 'antd';
+import './index.css';
+
 
 
 const MyComponent = () => {
-  const myRef = useRef(null);
 
   return (
-    <div ref={myRef}>
-      {/* Your content here */}
+    <div style={{ marginTop: '20px', marginLeft: '20px'}}>
+            <Button className="mt-4 p-2 bg-blue-800 text-white" type="primary">Click Me</Button>
     </div>
   );
 };
@@ -29,6 +30,8 @@ function App() {
       </Routes>
     </Router>
     
+    <MyComponent />
+
     </>
   );
 }
